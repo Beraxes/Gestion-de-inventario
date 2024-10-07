@@ -1,16 +1,24 @@
 //import logo from './logo.svg';
-import Navbar from './components/Navbar';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
+import Navbar from './components/Navbar';
 import AddProduct from "./components/AddProduct"
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <AddProduct />
-      </div>
-  ); 
+      <Routes>
+
+        <Route path="/" element={<AddProduct />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

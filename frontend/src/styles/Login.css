@@ -1,0 +1,10 @@
+.form-floating {
+    width: 300px;
+    margin: 10px auto;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
