@@ -1,0 +1,63 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    background-color: #f8f9fa; /* Color de fondo del Navbar */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container-fluid {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: #343a40; /* Color del texto del brand */
+    text-decoration: none;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #343a40; /* Color del icono del toggler */
+    margin: 6px 0;
+  }
+  
+  .navbar-collapse {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin-left: 2rem;
+  }
+  
+  .nav-link {
+    color: #343a40; /* Color del texto de los enlaces */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    background-color: #e9ecef; /* Color de fondo al pasar el mouse o cuando está activo */
+  }
