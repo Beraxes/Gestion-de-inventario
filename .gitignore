@@ -3,9 +3,10 @@
 # dependencies
 /node_modules
 */**/node_modules
+*/**/mongo-data
 /.pnp
 .pnp.js
-
+.env
 # testing
 /coverage
 
