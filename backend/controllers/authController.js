@@ -18,11 +18,19 @@ exports.register = async (req, res) => {
     await user.save();
 
     const token = generateToken(user._id);
-    res.status(201).json({ token });
+    const userData = {
+      name: user.name,
+      username: user.username,
+      token
+    };
+    
+    res.status(201).json(userData);
   } catch (error) {
     res.status(500).json({ message: 'Server error' });
   }
 };
+
+
 
 // Login user (with either email or username)
 exports.login = async (req, res) => {
@@ -38,8 +46,14 @@ exports.login = async (req, res) => {
     const isMatch = await user.matchPassword(password);
     if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
 
-    const token = generateToken(user._id);
-    res.json({ token });
+    // Prepare the response data
+    const userData = {
+      name: user.name, // Assuming User model has a 'name' field
+      username: user.username,
+      token: generateToken(user._id)
+    };
+
+    res.json(userData);
   } catch (error) {
     res.status(500).json({ message: 'Server error' });
   }
