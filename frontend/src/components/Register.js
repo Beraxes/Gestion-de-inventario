@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/Login.css';
 import AuthService from '../utils/AxiosInstance';
 
 function Register() {
@@ -28,8 +27,8 @@ function Register() {
   };
 
   return (
-    <div className="form-floating mb-3">
-      <h2>Register</h2>
+    <div className="form-floating mb-3 form-login-register">
+      <h2 className='d-flex justify-content-center'>Register</h2>
       {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-floating mb-3">
@@ -92,7 +91,7 @@ function Register() {
           />
           <label htmlFor="confirmPassword">Confirm Password</label>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary mb-3 form-floating  d-flex justify-content-center">
           Register
         </button>
       </form>

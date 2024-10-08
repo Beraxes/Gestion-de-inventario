@@ -1,7 +1,6 @@
 // frontend/src/components/Navbar.js (1-31)
 import React from "react";
 import { Link } from "react-router-dom"; // Import the Link component
-import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (

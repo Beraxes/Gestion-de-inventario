@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/Login.css';
 import AuthService from '../utils/AxiosInstance';
 
 function Login() {
@@ -20,11 +19,11 @@ function Login() {
   };
 
   return (
-    <div className="form-floating mb-3">
-    <h2>Login</h2>
+    <div className="form-floating mb-3 form-login-register">
+    <h2 className='d-flex justify-content-center'>Login</h2>
     {error && <p className="error-message">{error}</p>}
     <form onSubmit={handleSubmit}>
-      <div className="form-floating mb-3">
+      <div className="form-floating mb-3 justify-content-center">
         <input
           type="text"
           id="emailOrUsername"
@@ -32,9 +31,9 @@ function Login() {
           value={emailOrUsername}
           onChange={(e) => setEmailOrUsername(e.target.value)}
           required
-          className="form-control"
+          className="form-control d-flex justify-content-center"
         />
-        <label htmlFor="emailOrUsername">Enter email or username</label>
+        <label htmlFor="emailOrUsername" className='mb-3 justify-content-center d-flex'>Enter email or username</label>
       </div>
       <div className="form-floating">
         <input
@@ -48,7 +47,7 @@ function Login() {
         />
         <label htmlFor="password">Password</label>
       </div>
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn btn-primary mb-3 form-floating  d-flex justify-content-center">
         Login
       </button>
     </form>
