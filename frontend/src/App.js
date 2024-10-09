@@ -3,10 +3,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Login';
-import Register from './components/Register';
+import Login from './pages/Login';
+import Register from './pages/Register';
 import Navbar from './components/Navbar';
-import AddProduct from "./components/AddProduct"
+import AddProduct from "./pages/AddProduct"
 
 function App() {
   return (
