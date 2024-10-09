@@ -29,7 +29,7 @@ function Register() {
   return (
     <div className="form-floating mb-3 form-login-register">
       <h2 className='d-flex justify-content-center'>Register</h2>
-      {error && <p className="error-message">{error}</p>}
+      {error && <p className="error-message d-flex justify-content-center">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-floating mb-3">
           <input

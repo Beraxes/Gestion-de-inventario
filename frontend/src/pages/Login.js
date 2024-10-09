@@ -14,14 +14,14 @@ function Login() {
       // Handle the response data as needed
     } catch (error) {
       console.error('Login failed:', error.response ? error.response : error.message);
-      setError(error.response ? error.response.message : 'An error occurred during login.');
+      setError(error.response ? error.response.data.message : 'An error occurred during login.');
     }
   };
 
   return (
     <div className="form-floating mb-3 form-login-register">
     <h2 className='d-flex justify-content-center'>Login</h2>
-    {error && <p className="error-message">{error}</p>}
+    {error && <p className="error-message d-flex justify-content-center">{error}</p>}
     <form onSubmit={handleSubmit}>
       <div className="form-floating mb-3 justify-content-center">
         <input
